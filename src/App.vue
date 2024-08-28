@@ -37,7 +37,9 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
   export default {
     data (){
       return {
-        AppLogo : this.Assets('assets/media/Logo Osudada 2.svg'),
+        //'assets/media/Logo Osudada 2.svg' FOR LOCAL DEV
+        //'media/Logo Osudada 2.svg' BUILD 
+        AppLogo : this.Assets('media/Logo Osudada 2.svg'),
       articles : [
             {
               id : 13023,

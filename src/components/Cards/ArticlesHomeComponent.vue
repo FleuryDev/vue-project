@@ -6,7 +6,7 @@
                                         <Splide :options="options" class="relative flex overflow-hidden rounded-lg h-full bg-transparent" aria-label="My Favorite Images">
                                             <!-- Items-->
                                             <SplideSlide v-for="(image, id) in article.images" :key="id"  class="duration-700 ease-in-out bg-transparent  inset-0 transition-transform transform z-20 translate-x-0 block w-full h-ful" >
-                                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src="this.$parent.$options.methods.Assets('assets/media/articles/'+image)" />
+                                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src="this.$parent.$options.methods.Assets('media/articles/'+image)" />
                                             </SplideSlide>
                                            
                                         </Splide>
