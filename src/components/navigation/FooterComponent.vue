@@ -61,9 +61,10 @@
 export default {
     data() {
         return {
-            logo : '../../assets/media/Logo Osudada 2.png'
+            
         }
     },
+    props : ['logo']
 }
 </script>
 <style lang="">

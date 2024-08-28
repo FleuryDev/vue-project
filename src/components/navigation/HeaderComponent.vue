@@ -6,7 +6,7 @@ import SearchFilterComponent from '../Filters/SearchFilterComponent.vue'
         <div class="w-full  shadow-md  p-3 max-lg:px-8 px-24 flex flex-col justify-around bg-white">
             <div class="w-full flex   justify-between"> 
                 <div class="image max-lg:w-3/12 lg:w-2/12  relative left-0 justify-betewen justify-between">
-                   <img src="../../assets/media/Logo Osudada 2.svg" class="image max-lg:w-2/3 lg:w-1/2 p-0" alt="">
+                   <img :src="logo" class="image max-lg:w-2/3 lg:w-1/2 p-0" alt="logo">
                 </div>
                 <div class=" max-lg:hidden lg:w-7/12 flex flex-wrap justify-center lg:justify-between  p-0 align-top   my-auto text-lg whitespace-normal ">
                     <div class=""><a href="index.html">Rechercher un bien</a></div>
@@ -57,6 +57,7 @@ import SearchFilterComponent from '../Filters/SearchFilterComponent.vue'
 
 export default {
     
+    props : ['logo']
 }
 </script>
 <style lang="">

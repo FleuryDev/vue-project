@@ -1,6 +1,6 @@
 <template>
-     <div id="hFilter" class="default-font sticky top-[7rem]  bg-white py-1">
-                    <div class="container w-full px-2  flex-wrap border shadow-zinc-200 shadow-sm rounded-lg inset-y-1/2 flex justify-around align-middle items-center mt-3">
+     <div id="hFilter" class="default-font sticky top-[7rem]  bg-white py-1 pt-0.5 mt-1.5">
+                    <div class="container w-full px-2  flex-wrap border shadow-zinc-200 shadow-sm rounded-lg inset-y-1/2 flex justify-around align-middle items-center mt-2">
                         <button type="button" >
                                 <svg  viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 8.41193V19.6342C1 20.1864 1.44772 20.6342 2 20.6342H8H14.3852C14.9335 20.6342 15.3795 20.1926 15.3851 19.6444L15.5 8.41193M1 8.41193L7.28194 1.432C7.67002 1.0008 8.34239 0.989228 8.74508 1.40683L15.5 8.41193M1 8.41193H15.5" stroke="black" stroke-opacity="0.7" stroke-width="2"/>

@@ -1,16 +1,18 @@
-
-
+<script setup>
+import { ArrowDown } from '@element-plus/icons-vue'
+</script>
 <template>
-  <el-dropdown @command="handleCommand">
+  <el-dropdown >
     <span class="el-dropdown-link flex flex-col">
       <span>
         {{title }} <el-icon class="el-icon--right"><arrow-down/></el-icon>
       </span>
-      <small id="ol">{{  selectedval }}</small>
+      <small v-if="selectedval" id="ol">{{  selectedval }}</small>
+      <small v-else>{{ items[0] }}</small>
     </span>
-    <template #dropdown>
+     <template #dropdown>
       <el-dropdown-menu >
-        <el-dropdown-item  v-for="(item, i) in items" :key="i" @click="selectedOption( item )" command="a">{{ item }}</el-dropdown-item>
+        <el-dropdown-item  v-for="(item, i) in items" :key="i" @click="selectedOption( item )" >{{ item }}</el-dropdown-item>
       </el-dropdown-menu>
     </template>
   </el-dropdown>
@@ -21,7 +23,7 @@
  export default {
     data() {
         return {
-            selectedval: '',
+            selectedval: null,
         }
     },
     methods: {
@@ -29,7 +31,7 @@
             this.selectedval = e
         }
     },
-    props : ['title','items']
+    props : ['title','items','default']
  }
 </script>
 <style scoped>

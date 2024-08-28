@@ -7,7 +7,7 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
 </script>
 
 <template>
-  <HeaderComponent/>
+  <HeaderComponent :logo="AppLogo"/>
   <main class="container w-full mx-auto flex max-lg:mt-20 lg:mt-32 min-h-96 z-0">
       <div class="w-full container  justify-between max-lg:mx-8 lg:px-24">
                 <IndexCarouselComponent/>
@@ -19,16 +19,9 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
                  
                 <section class="text-gray-600 flex w-full mx-auto default-font">
                   <div class="container px-0 py-8 mx-auto flex flex-wrap w-full">
-                    <div  class="flex flex-wrap mx-auto  -m-4 w-full justify-between">
-
-                       
-                        
+                    <div  class="flex flex-wrap mx-auto  -m-4 w-full justify-between">                        
                         <!--ITEM -->
-                        <ArticlesHomeComponent v-for="article in articles" :key="article.id" :title="article.title" :location="article.location" :prix="article.prix" :promoter="article.promoter" :status="article.status"/>
-                      
-
-                       
-                    </div>
+                        <ArticlesHomeComponent v-for="item in articles" :article="item" :key="item.id" />     </div>
                     <div class="flex mx-auto p-4 mt-5 mb-10">
                         <button class=" p-1 px-3 text-black bg-yellow-200 rounded-3xl">Suivant</button>
                     </div>
@@ -37,13 +30,14 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
                  
             </div>
   </main>
-  <FooterComponent/>
+  <FooterComponent :logo="AppLogo"/>
 </template>
 
 <script>
   export default {
     data (){
       return {
+        AppLogo : this.Assets('assets/media/Logo Osudada 2.svg'),
       articles : [
             {
               id : 13023,
@@ -51,8 +45,8 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
               location : ' Bidossessi, Abomey-Calavi',
               prix : 51000,
               promoter : 'The Catalyzer',
-              status : 'À louer'
-
+              status : 'À louer',
+              images : ['image1.jpg','image2.jpg','image3.jpg'],
             },
              {
               id : 54454,
@@ -60,7 +54,8 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
               location : ' Bidossessi, Abomey-Calavi',
               prix : 91000,
               promoter : 'THome Dom',
-              status : 'À louer'
+              status : 'À louer',
+               images : ['image4.jpg','image5.jpg','image6.jpg'],
 
             },
              {
@@ -69,7 +64,8 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
               location : ' Bidossessi, Abomey-Calavi',
               prix : 50000,
               promoter : 'The Catalyzer',
-              status : 'À louer'
+              status : 'À louer',
+               images : ['image2.jpg','image1.jpg','image3.jpg','image7.jpg','image8.jpg'],
 
             },
              {
@@ -78,7 +74,8 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
               location : ' Bidossessi, Abomey-Calavi',
               prix : 40000,
               promoter : 'The Catalyzer',
-              status : 'À louer'
+              status : 'À louer',
+               images : ['image9.jpg','image10.jpg','image11.jpg'],
 
             },
              {
@@ -87,12 +84,48 @@ import FooterComponent from './components/navigation/FooterComponent.vue'
               location : ' Bidossessi, Abomey-Calavi',
               prix : 51000,
               promoter : 'ADA Home',
-              status : 'À louer'
+              status : 'À louer',
+               images : ['image12.jpg','image13.jpg','image14.jpg'],
 
-            }
+            },
+            {
+              id : 40648,
+              title : '2 Pièces - Sanitaire',
+              location : ' Bidossessi, Abomey-Calavi',
+              prix : 90000,
+              promoter : 'The Catalyzer',
+              status : 'À louer',
+               images : ['image14.jpg','image15.jpg','image16.jpg'],
+
+            },
+            {
+              id : 455648,
+              title : '2 Pièces - Simple',
+              location : ' Bidossessi, Abomey-Calavi',
+              prix : 40000,
+              promoter : 'Azus pro',
+              status : 'À louer',
+               images : ['image20.jpg','image18.jpg','image1.jpg'],
+
+            },
+            {
+              id : 4506048,
+              title : '2 Pièces - Simple',
+              location : ' Bidossessi, Abomey-Calavi',
+              prix : 40000,
+              promoter : 'The Catalyzer',
+              status : 'À louer',
+               images : ['image9.jpg','image10.jpg','image11.jpg'],
+
+            },
            
       ],
       }
+    },
+    methods: {
+     Assets(pathImg){
+          return  new URL(pathImg,import.meta.url).href
+     }
     },
   }
 </script>
