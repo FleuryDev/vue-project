@@ -1,38 +1,42 @@
 <script setup>
-import { ArrowDown } from '@element-plus/icons-vue'
+import { ArrowDown } from "@element-plus/icons-vue";
 </script>
 <template>
-  <el-dropdown >
+  <el-dropdown>
     <span class="el-dropdown-link flex flex-col">
       <span>
-        {{title }} <el-icon class="el-icon--right"><arrow-down/></el-icon>
+        {{ title }} <el-icon class="el-icon--right"><arrow-down /></el-icon>
       </span>
-      <small v-if="selectedval" id="ol">{{  selectedval }}</small>
-      <small v-else>{{ items[0] }}</small>
+      <small v-if="selectedval" id="ol">{{ selectedval }}</small>
+      <small v-else> --- </small>
     </span>
-     <template #dropdown>
-      <el-dropdown-menu >
-        <el-dropdown-item  v-for="(item, i) in items" :key="i" @click="selectedOption( item )" >{{ item }}</el-dropdown-item>
+    <template #dropdown>
+      <el-dropdown-menu>
+        <el-dropdown-item
+          v-for="(item, i) in items"
+          :key="i"
+          @click="selectedOption(item)"
+          >{{ item }}</el-dropdown-item
+        >
       </el-dropdown-menu>
     </template>
   </el-dropdown>
 </template>
 
-
 <script>
- export default {
-    data() {
-        return {
-            selectedval: null,
-        }
+export default {
+  data() {
+    return {
+      selectedval: null,
+    };
+  },
+  methods: {
+    selectedOption(e) {
+      this.selectedval = e;
     },
-    methods: {
-        selectedOption(e){
-            this.selectedval = e
-        }
-    },
-    props : ['title','items','default']
- }
+  },
+  props: ["title", "items", "default"],
+};
 </script>
 <style scoped>
 .example-showcase .el-dropdown-link {
@@ -40,8 +44,5 @@ import { ArrowDown } from '@element-plus/icons-vue'
   color: var(--el-color-primary);
   display: flex;
   align-items: center;
-}
-el-dropdown-menu,el-dropdown-item{
-    z-index: 75555722421566666666666663 !important;
 }
 </style>

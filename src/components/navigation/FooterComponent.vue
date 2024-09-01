@@ -1,72 +1,106 @@
 <template>
-    <footer class="w-full flex default-font bottom-0 flex-col ">
-        
-          <div class="w-full  bg-footer  pt-12 pb-6 px-24 flex flex-col justify-around">
-            <div class="w-full flex flex-wrap max-lg:justify-center lg:justify-between"> 
-                <div class="image lg:w-3/12  relative left-0 justify-betewen justify-between">
-                   <img :src="logo" class="h-auto w-full lg:w-2/5 p-0" alt="logo"/>
-                    <p class=" py-4">Information sur l'entreprise</p>
-                </div>
-                <div class="lg:w-6/12 flex flex-wrap max-lg:justify-around lg:justify-between p-0 align-top   ">
-                    
-                            <div class="p-2 "> <h5 class="mb-4">Suplémentaire</h5>
-                                 <p class=" "> <a href="">Nos valeur</a></p>
-                                  <p class=" "><a href="">FAQ</a></p>
-                                   <p class=""><a href="">Blog</a></p>
-                            </div>
-                            <div class="p-2"><h5 class="mb-4">Assistance</h5>
-                                 <p class=" "> <a href="">Centre d'aide</a></p>
-                                  <p class=" "> <a href="">Devenir partenaire</a></p>
-                            </div>
-                            <div class="p-2 "><h5 class="mb-4">Statistiques</h5>
-                                 <p class=" "> <a href="">+200 biens publiés</a></p>
-                                  <p class=" "> <a href="">96 Agences immobilières</a></p>
-                                   <p class=" "> <a href="">99,9 % d'avis positifs</a></p>
-                            </div>
-                </div>
-                <div class=" lg:w-2/12 flex lg:float-right p-2  justify-between ">
-                    <div class="flex mx-auto justify-between lg:w-1/2">
-                        <div class="p-2 ">
-                           <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
-                        </div>
-                        <div class="p-2 ">
-                          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                          </div>
-                        <div class="p-2 ">
-                         <svg class="w-6 h-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-                          </div>
-                        <div class="p-2 ">
-                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-                        </div>
-                    </div>
-                    
-                </div>
+  <footer class="w-full flex font-regular bottom-0 flex-col">
+    <div class="w-full bg-footer pt-12 pb-6 px-24 flex flex-col justify-around">
+      <div class="w-full flex flex-wrap max-lg:justify-center lg:justify-between">
+        <div class="image lg:w-3/12 relative left-0 justify-betewen justify-between">
+          <img :src="logo" class="h-auto w-full lg:w-2/5 p-0" alt="logo" />
+          <p class="py-4">Information sur l'entreprise</p>
+        </div>
+        <div
+          class="lg:w-6/12 flex flex-wrap max-lg:justify-around lg:justify-between p-0 align-top"
+        >
+          <div class="p-2">
+            <h5 class="mb-2 font-regular">Suplémentaire</h5>
+            <p class=" "><a href="">Nos valeur</a></p>
+            <p class=" "><a href="">FAQ</a></p>
+            <p class=""><a href="">Blog</a></p>
+          </div>
+          <div class="p-2">
+            <h5 class="mb-2">Assistance</h5>
+            <p class=" "><a href="">Centre d'aide</a></p>
+            <p class=" "><a href="">Devenir partenaire</a></p>
+          </div>
+          <div class="p-2">
+            <h5 class="mb-2">Statistiques</h5>
+            <p class=" "><a href="">+200 biens publiés</a></p>
+            <p class=" "><a href="">96 Agences immobilières</a></p>
+            <p class=" "><a href="">99,9 % d'avis positifs</a></p>
+          </div>
+        </div>
+        <div class="lg:w-2/12 flex lg:float-right justify-between">
+          <div class="flex mx-auto justify-between lg:w-1/2">
+            <div class="p-2">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                />
+              </svg>
             </div>
-          <div class="w-full flex flex-wrap justify-between text-sm mt-8">
-            <div class="flex w-6/12">
-                <h6>Copywright &copy; 2024 Osudada,</h6>
+            <div class="p-2">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
             </div>
-            <div class="flex w-6/12 rounded-full">
-                <div class="ml-auto flex flex-wrap">
-                     -  FCFA  -&nbsp; <a href=""> Conditions d’utilisation</a> &nbsp;   - &nbsp; <a href="">Plan du site</a> &nbsp; - &nbsp; <a href="">Fonctionnement du site </a> 
-                </div>
-               
+            <div class="p-2">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                />
+              </svg>
+            </div>
+            <div class="p-2">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                />
+              </svg>
             </div>
           </div>
-
         </div>
-    </footer>
+      </div>
+      <div class="w-full flex flex-wrap justify-between text-sm mt-8">
+        <div class="flex w-6/12">
+          <h6>Copywright &copy; 2024 Osudada,</h6>
+        </div>
+        <div class="flex w-6/12 rounded-full">
+          <div class="ml-auto flex flex-wrap">
+            - FCFA -&nbsp; <a href=""> Conditions d’utilisation</a> &nbsp; - &nbsp;
+            <a href="">Plan du site</a> &nbsp; - &nbsp;
+            <a href="">Fonctionnement du site </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 <script>
 export default {
-    data() {
-        return {
-            
-        }
-    },
-    props : ['logo']
-}
+  data() {
+    return {};
+  },
+  props: ["logo"],
+};
 </script>
-<style lang="">
-    
-</style>
+<style lang=""></style>
