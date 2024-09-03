@@ -12,7 +12,7 @@
     </span>
     <template #dropdown>
       <div class="py-0">
-        <UserAuthenticated v-if="true" />
+        <UserAuthenticated v-if="userStore.isLogedIn" />
         <WebUser v-else />
       </div>
     </template>
@@ -20,8 +20,12 @@
 </template>
 
 <script lang="ts" setup>
+import { useUserStore } from "@/stores/User";
+
 import UserAuthenticated from "./UserAuthenticated.vue";
 import WebUser from "./WebUser.vue";
+
+const userStore = useUserStore();
 </script>
 <style>
 .el-popper {

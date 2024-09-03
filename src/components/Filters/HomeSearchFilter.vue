@@ -19,7 +19,17 @@ import SearchFilterComponent from "./SearchFilterComponent.vue";
       <SearchFilterComponent title="Quartier" :items="['Zogbadjè', '---', '---']" />
       <SearchFilterComponent
         title="Budjet"
-        :items="['10 000', '50 000', '100 000', '1 000 000']"
+        :items="[
+          '- 10 000',
+          '10 - 20 000',
+          '20 - 30 000',
+          '30 - 50 000',
+          '50 - 75 000',
+          '75 - 100 000',
+          '100 - 200 000',
+          '200 - 500 000',
+          '500 000 +',
+        ]"
       />
     </div>
     <div class="w-2/12 my-auto p-0">

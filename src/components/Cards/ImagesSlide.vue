@@ -6,35 +6,33 @@
   >
     <!-- Items-->
     <SplideSlide
-      v-for="(image, id) in imagex.images"
+      v-for="(image, id) in images"
       :key="id"
       class="duration-700 ease-in-out bg-transparent inset-0 transition-transform transform z-20 translate-x-0 block w-full h-ful"
     >
+      <!--'../../assets/media/articles/'-->
       <img
         alt="ecommerce"
         class="object-cover object-center w-full h-full block"
-        src="  "
+        :src="Assets('../../media/articles/' + image)"
       />
     </SplideSlide>
   </Splide>
 </template>
 <script>
 export default {
-  props: {
-    imagex: {
-      type: Object,
-      required: true,
-    },
-    options: {
-      type: Object,
-      required: true,
-    },
-    methods: {
-      Assets(pathImg) {
-        return new URL(pathImg, import.meta.url).href;
-      },
+  props: ["images", "options"],
+  methods: {
+    Assets(pathImg) {
+      return new URL(pathImg, import.meta.url).href;
     },
   },
 };
 </script>
-<style lang=""></style>
+<style setup>
+.btn-cust svg {
+  fill: currentColor;
+  height: 50%;
+  width: 1rem;
+}
+</style>

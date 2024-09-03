@@ -13,3 +13,6 @@
     />
   </svg>
 </template>
+<script setup>
+const props = defineProps(["stroke", "fill"]);
+</script>

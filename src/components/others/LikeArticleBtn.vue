@@ -1,0 +1,41 @@
+<template>
+  <div class="flex end-0 absolute top-3">
+    <button
+      @click="setLike(e, article)"
+      type="button"
+      class="z-40 flex items-center justify-centerh-full px-4 cursor-pointer"
+    >
+      <span
+        class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white bg-opacity-50"
+      >
+        <svg
+          :class="
+            useArticle.isFavorite(article.id) ? 'fill-[--primary-orange]' : ' fill-white'
+          "
+          class="w-3 h-3 text-gray-400 hover:text-white dark:text-gray-800 rtl:rotate-180"
+          viewBox="0 0 20 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.8068 2.14575L17.8074 2.14634C19.9317 4.23018 19.9291 7.46337 17.8104 9.53207L17.8103 9.53216L10.0003 17.1612L2.19019 9.53216L2.1901 9.53207C0.0711561 7.4631 0.0691129 4.22991 2.1891 2.15025L2.18998 2.14938C2.68681 1.65999 3.27858 1.27066 3.93159 1.00448C4.58453 0.738337 5.28538 0.60076 5.99369 0.6C7.33154 0.600121 8.61824 1.09121 9.59932 1.97241L10.0002 2.33249L10.4011 1.97247C11.3824 1.09136 12.6691 0.600275 14.007 0.6C14.7144 0.600567 15.4144 0.737716 16.0667 1.00323C16.719 1.26877 17.3103 1.65728 17.8068 2.14575Z"
+            stroke-width="1.2"
+          />
+        </svg>
+        <span class="sr-only">like it</span>
+      </span>
+    </button>
+  </div>
+</template>
+<script setup>
+import { useArticleStore } from "@/stores/Articles";
+
+import IdIcone from "../icons/idIcone.vue";
+
+const useArticle = useArticleStore();
+const props = defineProps(["article", "id"]);
+const emits = defineEmits(["like"]);
+const setLike = (e, article) => {
+  emits("like", article);
+};
+</script>

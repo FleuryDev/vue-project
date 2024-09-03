@@ -18,7 +18,7 @@
   >
 </template>
 <script setup lang="ts">
-import IdIcone from "@/components/icons/idIcone.vue";
+import IdIcone from '@/components/icons/idIcone.vue';
 </script>
 <style scoped>
 .menu__item {
