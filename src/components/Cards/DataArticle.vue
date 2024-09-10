@@ -23,7 +23,7 @@
   </section>
 </template>
 <script lang="ts" setup>
-import { computed, onBeforeMount, onMounted, ref } from "vue";
+import { computed, onBeforeMount, ref } from "vue";
 
 import ArticleNotFound from "../Errors/ArticleNotFound.vue";
 import ArticlesFilterPiecesComponent from "../Filters/ArticlesFilterPiecesComponent.vue";
@@ -49,11 +49,11 @@ const articlesItem = computed(() =>
       ) => item.type.includes(searchFilterValue.value));
 
       articlesLegth.value = result.length;
-      console.log(articlesLegth.value);
+      //console.log(articlesLegth.value);
       return result;
     }
 
-    console.log(articlesLegth.value);
+    //console.log(articlesLegth.value);
     return props.items;
   }
 );
@@ -62,4 +62,4 @@ const filterArticle = (values) => {
   searchFilterValue.value = values;
 };
 </script>
-<style lang=""></style>
+

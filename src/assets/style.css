@@ -72,15 +72,16 @@ header select option{
 
 
 .e-card{
-    @apply  p-0  relative max-lg:w-1/2 max-md:w-full mb-0 ;
+    @apply  p-0  relative  mb-0 ;
+    width : clamp(255px, 270px, 275px);
     z-index: 0!important;
 }
-@media  (min-width: 1024px) {
+/* @media  (min-width: 1024px) {
     .e-card{
     width: 23.5%;
     
-}
-}
+} 
+/* }  */
 .e-card-imgs img{
     z-index: 0 !important;
 }

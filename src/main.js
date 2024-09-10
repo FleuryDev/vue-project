@@ -16,14 +16,17 @@ import HomeFilter from './components/navigation/HomeFilter.vue';
 import DefaultLayout from './layouts/defaultLayout.vue';
 import SimpleLayout from './layouts/simpleLayout.vue';
 import router from './router';
+import badge from "@/components/others/badge.vue";
+
 
 const app = createApp( App );
-const pania= createPinia();
+const pinia= createPinia();
 app.component('default-layout', DefaultLayout)
 app.component('simpleLayout',SimpleLayout)
+app.component('badge',badge)
 app.component('HomeFilter',HomeFilter)
 app.component('ImagesSlide',ImagesSlide)
-app.use(pania)
+app.use(pinia)
 app.use(InnovDevIcon)
 app.use( VueSplide );
 app.use(ElementPlus)

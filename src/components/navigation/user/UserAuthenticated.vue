@@ -1,24 +1,26 @@
 <template>
-  <router-link to="/" class="menu__item"><id-icone name="envelope" />Message</router-link>
+  <router-link to="/" class="menu__item"><id-icon name="envelope" />
+  <badge value="9"/>
+    Message</router-link>
 
   <router-link to="/" class="menu__item"
-    ><id-icone name="calendar" />Réservation</router-link
+    ><id-icon name="calendar" />Réservation</router-link
   >
   <router-link to="/" class="menu__item menu__item-active"
-    ><id-icone name="heart" />Favoris</router-link
+    ><id-icon name="heart" stroke="black" />Favoris</router-link
   >
   <router-link to="/" class="menu__item border-t"
-    ><id-icone name="user" />Mon Compte</router-link
+    ><id-icon name="user"  />Mon Compte</router-link
   >
   <router-link to="/" class="menu__item border-t">
-    <id-icone name="help-rounded" /> Centre d'aide</router-link
+    <id-icon name="help-rounded" /> Centre d'aide</router-link
   >
   <router-link to="/" class="menu__item">
-    <id-icone name="logout-rounded" /> Déconnexion</router-link
+    <id-icon name="logout-rounded" /> Déconnexion</router-link
   >
 </template>
 <script setup lang="ts">
-import IdIcone from '@/components/icons/idIcone.vue';
+import IdIcon from "@/components/icons/idIcone.vue";
 </script>
 <style scoped>
 .menu__item {

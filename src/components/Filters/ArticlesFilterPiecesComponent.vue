@@ -3,7 +3,7 @@
     <div
       class="container w-full px-2 flex-wrap border shadow-zinc-200 shadow-sm rounded-lg inset-y-1/2 flex justify-around align-middle items-center mt-2"
     >
-      <button @click="filterHandler($e, '1 Piece')" value="1 piece">
+      <button :class=" setStateActive === 1?'bg-[#d9d9d955] rounded-md':''" @click="filterHandler($e, '1 Piece',1)" value="1 piece">
         <svg viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1 8.41193V19.6342C1 20.1864 1.44772 20.6342 2 20.6342H8H14.3852C14.9335 20.6342 15.3795 20.1926 15.3851 19.6444L15.5 8.41193M1 8.41193L7.28194 1.432C7.67002 1.0008 8.34239 0.989228 8.74508 1.40683L15.5 8.41193M1 8.41193H15.5"
@@ -15,7 +15,7 @@
         <span> 1 piece</span>
       </button>
 
-      <button @click="filterHandler($e, '2 Pieces')" value="2 pieces">
+      <button :class=" setStateActive === 2?'bg-[#d9d9d955] rounded-md':''" @click="filterHandler($e, '2 Pieces',2)" value="2 pieces">
         <svg viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1 8.41193V19.6342C1 20.1864 1.44772 20.6342 2 20.6342H8M1 8.41193L7.3119 1.39871C7.68875 0.979991 8.33692 0.955034 8.74485 1.34354L11.5 3.96749M1 8.41193H8.25M11.5 3.96749H18.3046C18.5881 3.96749 18.8583 4.08781 19.0479 4.29852L22.75 8.41193M11.5 3.96749L8.25 8.41193M8.25 8.41193L8 20.6342M8.25 8.41193H22.75M8 20.6342H21.75C22.3023 20.6342 22.75 20.1864 22.75 19.6342V8.41193"
@@ -27,7 +27,7 @@
         <span>2 pieces</span>
       </button>
 
-      <button @click="filterHandler($e, '3 Pieces')">
+      <button :class=" setStateActive === 3?'bg-[#d9d9d955] rounded-md':''" @click="filterHandler($e, '3 Pieces',3)">
         <svg viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1 8.41193V19.6342C1 20.1864 1.44772 20.6342 2 20.6342H8.77778M1 8.41193L8.12297 1.28896C8.49246 0.919469 9.08413 0.896746 9.48087 1.23681L12.6667 3.96749M1 8.41193H9.05556M33.2222 8.41193V19.6342C33.2222 20.1864 32.7745 20.6342 32.2222 20.6342H25.1667H17.1111M33.2222 8.41193L29.0707 4.26038C28.8831 4.07285 28.6288 3.96749 28.3636 3.96749H20.7222M33.2222 8.41193H25.1667H17.1111M12.6667 3.96749H20.7222M12.6667 3.96749L9.05556 8.41193M20.7222 3.96749L17.1111 8.41193M17.1111 8.41193H9.05556M17.1111 8.41193V20.6342M9.05556 8.41193L8.77778 20.6342M8.77778 20.6342H17.1111"
@@ -39,7 +39,7 @@
         <span>3 pieces</span>
       </button>
 
-      <button @click="filterHandler($e, '4 Pieces')">
+      <button :class=" setStateActive === 4?'bg-[#d9d9d955] rounded-md':''"  @click="filterHandler($e, '4 Pieces',4)">
         <svg viewBox="0 0 38 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1 8.41193V19.6342C1 20.1864 1.44772 20.6342 2 20.6342H8M1 8.41193L7.3119 1.39871C7.68875 0.979991 8.33692 0.955034 8.74485 1.34354L11.5 3.96749M1 8.41193H8.25M11.5 3.96749H18.75M11.5 3.96749L8.25 8.41193M26 3.96749H18.75M26 3.96749L22.75 8.41193M26 3.96749H33.0146C33.3211 3.96749 33.6107 4.10802 33.8003 4.3488L37 8.41193M18.75 3.96749L15.5 8.41193M15.5 8.41193H8.25M15.5 8.41193V20.6342M15.5 8.41193H22.75M8.25 8.41193L8 20.6342M8 20.6342H15.5M15.5 20.6342H22.75M22.75 8.41193V20.6342M22.75 8.41193H37M22.75 20.6342H30H36C36.5523 20.6342 37 20.1864 37 19.6342V8.41193"
@@ -50,7 +50,7 @@
         </svg>
         <span>4 pieces</span>
       </button>
-      <button @click="filterHandler($e, '5 Pieces')">
+      <button :class=" setStateActive === 5?'bg-[#d9d9d955] rounded-md':''"  @click="filterHandler($e, '5 Pieces',5)">
         <svg viewBox="0 0 45 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1 8.41193V19.6342C1 20.1864 1.44772 20.6342 2 20.6342H8M1 8.41193L7.3119 1.39871C7.68875 0.979991 8.33692 0.955034 8.74485 1.34354L11.5 3.96749M1 8.41193H8.25M30 20.6342H22.75M30 20.6342H37H43C43.5523 20.6342 44 20.1864 44 19.6342V8.41193M30 20.6342L29.875 8.41193M11.5 3.96749H18.75M11.5 3.96749L8.25 8.41193M26 3.96749H18.75M26 3.96749L22.75 8.41193M26 3.96749H33.5M18.75 3.96749L15.5 8.41193M15.5 8.41193H8.25M15.5 8.41193V20.6342M15.5 8.41193H22.75M8.25 8.41193L8 20.6342M8 20.6342H15.5M15.5 20.6342H22.75M22.75 8.41193V20.6342M22.75 8.41193H29.875M33.5 3.96749H39.5546C39.8381 3.96749 40.1083 4.08781 40.2979 4.29852L44 8.41193M33.5 3.96749L29.875 8.41193M44 8.41193H29.875"
@@ -61,7 +61,7 @@
         </svg>
         <span>5 pieces</span>
       </button>
-      <button @click="filterHandler($e, 'carrelee')">
+      <button :class=" setStateActive === 6?'bg-[#d9d9d955] rounded-md':''"  @click="filterHandler($e, 'carrelee',6)">
         <svg viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1 9.16666V20.5C1 21.0523 1.44772 21.5 2 21.5H16C16.5523 21.5 17 21.0523 17 20.5V9.16666C17 8.61437 16.5523 8.16666 16 8.16666H2C1.44772 8.16666 1 8.61437 1 9.16666Z"
@@ -84,7 +84,7 @@
         </svg>
         <span>Carrelée</span>
       </button>
-      <button @click="filterHandler($e, 'simple')">
+      <button :class=" setStateActive === 7?'bg-[#d9d9d955] rounded-md':''"  @click="filterHandler($e, 'simple',7)">
         <svg
           width="18"
           height="21"
@@ -100,7 +100,7 @@
         </svg>
         <span>Simple</span>
       </button>
-      <button @click="filterHandler($e, 'Guest House')">
+      <button :class=" setStateActive === 8?'bg-[#d9d9d955] rounded-md':''"  @click="filterHandler($e, 'Guest House',8)">
         <svg viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
@@ -116,7 +116,7 @@
           House</span
         >
       </button>
-      <button @click="filterHandler($e, 'Personnelle')">
+      <button :class=" setStateActive === 9?'bg-[#d9d9d955] rounded-md':''"  @click="filterHandler($e, 'Personnelle',9)">
         <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M14.6479 0.0986096C14.5381 0.0340452 14.4131 0 14.2857 0C14.1584 0 14.0333 0.0340452 13.9236 0.0986096L1.16504 7.60358L1.88932 8.83501L14.2857 1.54289L26.6821 8.83572L27.4064 7.6043L22.8571 4.92859V1.42861C22.8571 1.23917 22.7819 1.05748 22.6479 0.923531C22.5139 0.789577 22.3323 0.714322 22.1428 0.714322H20C19.8105 0.714322 19.6289 0.789577 19.4949 0.923531C19.3609 1.05748 19.2857 1.23917 19.2857 1.42861V2.82646L14.6479 0.0986096ZM7.14288 10.7143H15V15H7.14288V10.7143Z"
@@ -136,7 +136,7 @@
           personnelle</span
         >
       </button>
-      <button @click="filterHandler($e, 'Commune')">
+      <button :class=" setStateActive === 10?'bg-[#d9d9d955] rounded-md':''"  @click="filterHandler($e, 'Commune',10)">
         <svg viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M16 18.7145C16 18.9908 15.9064 19.2557 15.7397 19.451C15.573 19.6464 15.3469 19.7561 15.1111 19.7561H0.888889C0.653141 19.7561 0.427049 19.6464 0.26035 19.451C0.0936507 19.2557 2.13965e-07 18.9908 2.13965e-07 18.7145V7.76778C-9.37633e-05 7.60906 0.0307708 7.45241 0.0902365 7.30981C0.149702 7.1672 0.236196 7.0424 0.343111 6.94495L7.45422 0.463346C7.61026 0.321117 7.80231 0.243896 8 0.243896C8.19769 0.243896 8.38974 0.321117 8.54578 0.463346L15.6569 6.94495C15.7638 7.0424 15.8503 7.1672 15.9098 7.30981C15.9692 7.45241 16.0001 7.60906 16 7.76778V18.7145ZM14.2222 17.673V8.27606L8 2.60583L1.77778 8.27606V17.673H14.2222Z"
@@ -158,8 +158,12 @@
   </div>
 </template>
 <script setup>
+import {ref} from "vue";
+
 const emit = defineEmits(["filter"]);
-const filterHandler = (event, value) => {
-  emit("filter", value);
+const setStateActive = ref(0);
+const filterHandler = (event, value,id) => {
+  setStateActive.value = id;
+  emit("filter", value,id);
 };
 </script>

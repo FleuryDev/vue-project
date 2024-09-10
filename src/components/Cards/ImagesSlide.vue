@@ -1,3 +1,11 @@
+<script setup>
+import { defineProps } from "vue";
+
+import { useHelperStore } from "@/stores/Helper";
+
+defineProps(["images", "options"]);
+const helper = useHelperStore();
+</script>
 <template>
   <Splide
     :options="options"
@@ -14,25 +22,8 @@
       <img
         alt="ecommerce"
         class="object-cover object-center w-full h-full block"
-        :src="Assets('../../media/articles/' + image)"
+        :src="helper.Assets('media/articles/' + image)"
       />
     </SplideSlide>
   </Splide>
 </template>
-<script>
-export default {
-  props: ["images", "options"],
-  methods: {
-    Assets(pathImg) {
-      return new URL(pathImg, import.meta.url).href;
-    },
-  },
-};
-</script>
-<style setup>
-.btn-cust svg {
-  fill: currentColor;
-  height: 50%;
-  width: 1rem;
-}
-</style>

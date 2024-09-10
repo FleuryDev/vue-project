@@ -1,10 +1,9 @@
 <script setup>
-import routes from "@/router/routes";
 
 import UserNav from "./user/UserNav.vue";
 </script>
 <template>
-  <header class="w-full max-h-32 fixed top-0 default-font">
+  <header class="w-full max-h-32 fixed top-0 max-w-[1400px] default-font">
     <div
       class="w-full shadow-md p-3 max-lg:px-8 px-24 flex flex-col justify-around bg-white"
     >
@@ -12,7 +11,7 @@ import UserNav from "./user/UserNav.vue";
         <div
           class="image max-lg:w-3/12 lg:w-2/12 relative left-0 justify-betewen justify-between"
         >
-          <router-link to="/">
+          <router-link :to="{ name: 'home' }">
             <img :src="logo" class="image max-lg:w-2/3 lg:w-1/2 p-0" alt="logo" />
           </router-link>
         </div>

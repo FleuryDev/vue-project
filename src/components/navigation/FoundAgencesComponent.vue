@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IndexCarouselComponent from '../carousels/IndexCarouselComponent.vue';
+import IndexCarouselComponent from "../carousels/IndexCarouselComponent.vue";
 </script>
 
 <template>
@@ -107,11 +107,12 @@ import IndexCarouselComponent from '../carousels/IndexCarouselComponent.vue';
             </div>
           </div>
           <div class="w-full flex px-6 pb-6 mx-auto">
-            <a
+            <router-link
               class="py-1 px-4 rounded-full font-semiboldb font-regular bg-[#ffc80194]"
-              href=""
-              >Voir le profil</a
+              :to="{ name: 'AgenceShow', params: { id: 5 } }"
+              >Voir le profil</router-link
             >
+            <a href=""></a>
           </div>
         </div>
 

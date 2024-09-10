@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import IndexCarouselComponent from "../carousels/IndexCarouselComponent.vue";
-import IdIcone from "../icons/idIcone.vue";
+import IndexCarouselComponent from '../carousels/IndexCarouselComponent.vue';
+import IdIcone from '../icons/idIcone.vue';
 </script>
 
 <template>
   <div
     class="w-full mx-auto flex flex-wrap space-y-5 min-h-96 z-0 default-font text-black"
   >
-    <div class="flex mx-auto w-full lg:px-36 justify-between">
+    <div
+      class="flex mx-auto w-full lg:px-36 justify-between align-middle place-content-center place-items-center sticky top-20 backdrop-blur-sm lg:min-h-10 bg-[#ffffff50] z-50"
+    >
       <h2 class="text-xl font-bold">2 Pièces - Sanitaire</h2>
-      <span class="text-sm py-1 px-4 bg-[#fe96042a] rounded-full">&Agrave; louer</span>
+      <span class="text-sm py-1 px-4 bg-[#fe96042a] rounded-full"> &Agrave; louer</span>
     </div>
     <div class="w-full justify-between">
       <div class="w-full flex justify-center">
@@ -267,56 +269,12 @@ import IdIcone from "../icons/idIcone.vue";
                           Locataire, Calavi
                         </div>
                         <div class="w-full flex text-xs font-light">
-                          <svg
-                            class="w-3 h-3 mr-1 fill-yellow-300"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
-                          >
-                            <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
-                            <path
-                              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                            />
-                          </svg>
-                          <svg
-                            class="w-3 h-3 mr-1 fill-yellow-300"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
-                          >
-                            <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
-                            <path
-                              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                            />
-                          </svg>
-                          <svg
-                            class="w-3 h-3 mr-1 fill-yellow-300"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
-                          >
-                            <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
-                            <path
-                              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                            />
-                          </svg>
-                          <svg
-                            class="w-3 h-3 mr-1 fill-yellow-300"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
-                          >
-                            <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
-                            <path
-                              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                            />
-                          </svg>
-                          <svg
-                            class="w-3 h-3 mr-1 fill-yellow-300"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
-                          >
-                            <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
-                            <path
-                              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                            />
-                          </svg>
+                          <id-icon class="w-3 h-3 mr-1 fill-yellow-300" name="star" />
+                          <id-icon class="w-3 h-3 mr-1 fill-yellow-300" name="star" />
+                          <id-icon class="w-3 h-3 mr-1 fill-yellow-300" name="star" />
+                          <id-icon class="w-3 h-3 mr-1 fill-yellow-300" name="star" />
+                          <id-icon class="w-3 h-3 mr-1 fill-yellow-300" name="star" />
+
                           <span class="text-xs ml-2">il y a 3 jrs</span>
                         </div>
                       </div>
@@ -349,7 +307,7 @@ import IdIcone from "../icons/idIcone.vue";
                 <div class="flex flex-col p-0 w-full">
                   <h3 class="font-semibold text-lg">Où se trouve le bien immobilier ?</h3>
                 </div>
-                <div class="flex space-x-4 border py-3 w-full">
+                <div class="block space-x-4 border py-3 w-full">
                   <!--google maps-->
                   <iframe
                     disabled
@@ -360,6 +318,9 @@ import IdIcone from "../icons/idIcone.vue";
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                   ></iframe>
+                  <div
+                    class="w-full h-full bg-[#ffffff70] -translate-x-4 -translate-y-full left-0 backdrop-blur-sm"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -381,20 +342,20 @@ import IdIcone from "../icons/idIcone.vue";
                   >
                     <div class="relative text-base text-black z-0 w-full flex">
                       <div
-                        class="w-4/12 p-0 flex flex-row space-x-1 align-text-bottom justify-start"
+                        class="w-4/12 p-0 flex flex-row space-x-1 align-text-start justify-start"
                       >
-                        <IdIcone name="user-full" class="h-4 w-4" />
+                        <IdIcone name="user-full" class="h-5 w-4" />
                         <label for="name" class="w">Prénom</label>
                       </div>
                       <div class="w-10/12 flex">
-                        <input type="text" name="name" id="name" class="peer" required />
+                        <input type="text" name="name" id="name" required />
                       </div>
                     </div>
                     <div class="relative text-base text-black z-0 w-full flex">
                       <div
                         class="w-4/12 p-0 flex flex-row space-x-1 align-text-bottom justify-start"
                       >
-                        <IdIcone name="telephone" class="h-4 w-4" />
+                        <IdIcone name="telephone" class="h-5 w-5" />
                         <label for="tel" class="">Numéro</label>
                       </div>
                       <div class="w-10/12 flex">
@@ -405,7 +366,7 @@ import IdIcone from "../icons/idIcone.vue";
                       <div
                         class="w-9/12 p-0 flex flex-row space-x-1 align-text-bottom justify-start"
                       >
-                        <idIcone name="calendar-checked" class="h-4 w-4" />
+                        <idIcone name="calendar-check" class="h-5 w-5" />
                         <label for="day" class="w">Jour de visite</label>
                       </div>
                       <div class="w-10/12 flex">
@@ -416,8 +377,8 @@ import IdIcone from "../icons/idIcone.vue";
                       <div
                         class="w-10/12 p-0 flex flex-row space-x-1 align-text-bottom justify-start"
                       >
-                        <IdIcone name="clock" class="h-4 w-4" />
-                        <label for="hours" class="w">Heure de visite</label>
+                        <IdIcone name="hour-full" class="h-5 w-5" />
+                        <label for="hour" class="w">Heure de visite</label>
                       </div>
                       <div class="w-10/12 flex">
                         <input

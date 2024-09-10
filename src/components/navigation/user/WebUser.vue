@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import IdIcone from '@/components/icons/idIcone.vue';
+import IdIcon from '@/components/icons/idIcone.vue';
 </script>
 
 <template>
   <router-link to="/" class="menu__item">
-    <IdIcone name="login-rounded" /> Connexion</router-link
-  >
+    <id-icon name="login-rounded" /> Connexion</router-link>
   <router-link to="/" class="menu__item"
-    ><id-icone name="user-plus" /> Inscription
+    ><id-icon name="user-plus" /> Inscription
   </router-link>
   <router-link to="/" class="menu__item border-t">
-    <id-icone name="help-rounded" /> Centre d'aide</router-link
+    <id-icon name="help-rounded" /> Centre d'aide</router-link
   >
 </template>
 <style scoped>

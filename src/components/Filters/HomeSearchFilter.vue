@@ -1,5 +1,6 @@
 <script setup>
 import SearchFilterComponent from "./SearchFilterComponent.vue";
+import IdIcone from "@/components/icons/idIcone.vue";
 </script>
 
 <template>
@@ -33,7 +34,9 @@ import SearchFilterComponent from "./SearchFilterComponent.vue";
       />
     </div>
     <div class="w-2/12 my-auto p-0">
+
       <button class="border bg-search-btn p-2 rounded-full :focus[none] float-right">
+
         <svg
           class="w-5 h-5 fill-current text-white"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,10 +52,4 @@ import SearchFilterComponent from "./SearchFilterComponent.vue";
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {};
-  },
-};
-</script>
+

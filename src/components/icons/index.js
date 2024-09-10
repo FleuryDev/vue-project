@@ -15,7 +15,7 @@ import User from './svglib/user.vue';
 export const InnovDevIcon =  {
     install(App){
         const app = App;
-        app.component('IDIcone',IdIcone)
+        app.component('id-icon',IdIcone)
     app.component('user-plus', UserPlus);
     app.component('logout-rounded', LogoutRounded);
     app.component('InnovDevIcon', InnovDevIcon);

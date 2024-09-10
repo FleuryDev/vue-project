@@ -45,13 +45,13 @@ export const useArticleStore = defineStore('ArticleStore',()=> {
       //console.log(user.favoriteArticles)
     }
     function setLikeArticle (article) {
-         console.log("Like article", article);
+         
         currentArticle.value = article
         likeArticle()
     }
 
     function isFavorite (articleId) {
-        console.log(articleId);
+  
             // console.log(user.favoriteArticles.includes(articleId))
        return user.favoriteArticles.includes(articleId)
     }

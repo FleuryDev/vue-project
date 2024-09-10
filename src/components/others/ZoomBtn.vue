@@ -1,7 +1,7 @@
 <template>
-  <div class="flex end-0 absolute top-full -mt-14">
+  <div class="flex end-0 absolute z-[90] top-full -mt-14">
     <button
-      @click="ZoomImage(e, images)"
+      @click="ZoomImage($event, images)"
       type="button"
       class="z-40 hover:scale-150 items-center justify-center h-full mr-3 cursor-pointer focus:outline-none"
     >
@@ -26,7 +26,7 @@
 <script setup>
 import { defineEmits } from 'vue';
 
-const props = defineProps(["images"]);
+defineProps(["images"]);
 const emitter = defineEmits(["open-image", "zoom-image"]);
 const ZoomImage = (e, images) => {
   emitter("zoom-image", images);
